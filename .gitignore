@@ -1,0 +1,5 @@
+*.o
+*.wav
+lib/
+test_aac.sh
+alacSample
