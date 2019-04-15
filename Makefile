@@ -5,7 +5,7 @@ NAME = libalac
 ALAC_LIB = $(NAME).$(LIB_SUFFIX)
 
 OBJS = alac.o
-BIN = alacSample
+BIN = alacRTMP
 RM = rm -f
 
 
@@ -14,6 +14,7 @@ FAAC_DIR = /home/pi/faac/bin
 LIB_DIR = ./lib
 
 INCS = -I $(FAAC_DIR)/include -I$(ALSA_DIR)/include -I./include
+INCS += -I../rtmp/so_librtmp/include
 LIBS = -L$(FAAC_DIR)/lib -L$(ALSA_DIR)/lib -L./lib
 LIB_FLAG = -lfaac -lasound -lalac
 CFLAGS = $(INCS) $(LIBS) $(LIB_FLAG) -fPIC  -Wall
